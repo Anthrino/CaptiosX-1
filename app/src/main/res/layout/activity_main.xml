@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#B3E5FC" />
-<android.support.v4.widget.DrawerLayout 
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:id="@+id/navDrawer"
-    >
+        android:background="#212121"
+        android:titleTextColor="#F50057"/>
 
-<ScrollView
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-
-    android:scrollbars = "vertical"
-    android:scrollbarStyle="insideInset">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#424242">
-
-
-    <ImageButton
-        android:id="@+id/Img1"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/navDrawer"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/hall"
-        android:layout_marginBottom="10dp"
-        android:onClick="navigate"/>
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/Img2"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/kitchen"
-        android:layout_marginBottom="10dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-    <ImageButton
-        android:id="@+id/Img3"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/bedroom"
-        android:layout_marginBottom="10dp"/>
-</LinearLayout>
-</ScrollView>
-    <android.support.design.widget.NavigationView
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        >
-            <ListView
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/Profiles"/>
-            </android.support.design.widget.NavigationView>
+                android:background="#424242"
+                android:orientation="vertical">
 
-</android.support.v4.widget.DrawerLayout>
-    </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/Img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/hall"
+                    android:onClick="navigate" />
+
+                <ImageButton
+                    android:id="@+id/Img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/kitchen" />
+
+                <ImageButton
+                    android:id="@+id/Img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bedroom" />
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.design.widget.NavigationView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#212121">
+
+            <ListView
+                android:id="@+id/Profiles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

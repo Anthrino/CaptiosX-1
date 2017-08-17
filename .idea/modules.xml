@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CaptiosX.iml" filepath="$PROJECT_DIR$/CaptiosX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeAutomation.iml" filepath="$PROJECT_DIR$/HomeAutomation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

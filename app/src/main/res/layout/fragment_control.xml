@@ -19,7 +19,9 @@
         android:layout_alignLeft="@+id/master_switch"
         android:layout_alignStart="@+id/master_switch"
         android:layout_marginLeft="49dp"
-        android:layout_marginStart="49dp" />
+        android:layout_marginStart="49dp"
+        android:onClick="switchTrigger"
+        />
 
     <Switch
         android:id="@+id/tv_switch"
@@ -29,7 +31,9 @@
         android:layout_marginTop="66dp"
         android:layout_below="@+id/lights_switch"
         android:layout_alignLeft="@+id/lights_switch"
-        android:layout_alignStart="@+id/lights_switch" />
+        android:layout_alignStart="@+id/lights_switch"
+        android:onClick="switchTrigger"
+        />
 
     <Switch
         android:id="@+id/fans_switch"
@@ -39,7 +43,8 @@
         android:layout_marginTop="60dp"
         android:layout_below="@+id/tv_image"
         android:layout_alignLeft="@+id/tv_switch"
-        android:layout_alignStart="@+id/tv_switch" />
+        android:layout_alignStart="@+id/tv_switch"
+        android:onClick="switchTrigger"/>
 
     <ImageView
         android:id="@+id/lights_image"
@@ -78,7 +83,8 @@
         android:text="Master  "
         android:layout_marginTop="35dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="switchTrigger"/>
 
     <TextView
         android:id="@+id/hall_text"

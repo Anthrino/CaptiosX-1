@@ -59,11 +59,6 @@ public class ControlAxctivity extends AppCompatActivity {
             {
                 master.setChecked(false);
             }
-
-
-
-
-
         }
         Log.d("CaptiosX",switchCount.toString());
 

@@ -12,6 +12,8 @@ import android.widget.Switch;
 
 public class BedroomActivity extends AppCompatActivity {
 
+    Switch master,fans,lights,tv;
+    Integer switchCount=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bedroom_fragment);

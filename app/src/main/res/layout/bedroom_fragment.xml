@@ -39,12 +39,15 @@
         android:id="@+id/ac_temp_ctrl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Air Coin  "
+        android:background="@color/colorPrimary"
         android:textColor="#F50057"
         android:onClick="switchTrigger"
-        android:layout_marginTop="21dp"
-        android:layout_alignTop="@+id/ac_icon"
-        android:layout_alignRight="@+id/tv_switch"/>
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:max="17"
+        android:layout_below="@+id/ac_icon"
+        android:layout_alignRight="@+id/ac_icon"
+        android:layout_alignLeft="@+id/ac_switch" />
 
     <ImageView
         android:id="@+id/lights_image"
@@ -77,7 +80,6 @@
         android:onClick="switchTrigger"
         android:layout_marginTop="20dp"
         android:layout_alignTop="@+id/ac_icon"
-        android:layout_above="@id/ac_temp_ctrl"
         android:layout_alignRight="@+id/lights_switch"
         android:layout_alignEnd="@+id/lights_switch" />
 

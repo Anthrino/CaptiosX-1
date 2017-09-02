@@ -4,7 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.SeekBar;
 import android.widget.Switch;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Johns on 9/1/2017.
@@ -12,8 +16,10 @@ import android.widget.Switch;
 
 public class BedroomActivity extends AppCompatActivity {
 
-    Switch master,fans,lights,tv;
+    Switch master,fans,lights,tv,ac;
+    SeekBar ac_seek_bar;
     Integer switchCount=0;
+    TextView temp_text;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bedroom_fragment);
@@ -21,11 +27,34 @@ public class BedroomActivity extends AppCompatActivity {
         fans = (Switch)findViewById(R.id.fans_switch);
         lights = (Switch)findViewById(R.id.lights_switch);
         tv = (Switch)findViewById(R.id.tv_switch);
+        ac=(Switch)findViewById(R.id.ac_switch);
+        ac_seek_bar=(SeekBar)findViewById(R.id.ac_temp_ctrl);
+        temp_text=(TextView)findViewById(R.id.temp_text);
+      //  ac_seek_bar.setThumbTintList(Colo);
+        ac_seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                String text = "Current temperature: "+(i+16)+" 'C";
+                temp_text.setText(text);
 
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
 
 
     }
+
+
 
     public void switchTrigger(View v)
     {
@@ -34,15 +63,18 @@ public class BedroomActivity extends AppCompatActivity {
         {
             if(master.isChecked())
             {
-                fans.setChecked(true);
                 lights.setChecked(true);
                 tv.setChecked(true);
+                ac.setChecked(true);
+                s=(Switch)findViewById(R.id.ac_switch);
                 switchCount=3;
             }
             else{
-                fans.setChecked(false);
+
                 lights.setChecked(false);
                 tv.setChecked(false);
+                ac.setChecked(false);
+                s=(Switch)findViewById(R.id.ac_switch);
                 switchCount=0;
             }
         }
@@ -60,10 +92,20 @@ public class BedroomActivity extends AppCompatActivity {
                 master.setChecked(false);
             }
         }
+
+        if(s.getId()==R.id.ac_switch)
+        {
+            if(s.isChecked()) {
+                ac_seek_bar.setVisibility(View.VISIBLE);
+                temp_text.setVisibility(View.VISIBLE);
+            }
+            else {
+                ac_seek_bar.setVisibility(View.GONE);
+                temp_text.setVisibility(View.GONE);
+            }
+        }
         Log.d("CaptiosX",switchCount.toString());
 
     }
-
-}
 
 }

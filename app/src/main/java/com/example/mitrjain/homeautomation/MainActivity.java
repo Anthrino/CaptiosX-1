@@ -53,13 +53,15 @@ public class MainActivity extends AppCompatActivity {
 
         switch (vId) {
             case R.id.Img1:
-                Intent i = new Intent(MainActivity.this, ControlAxctivity.class);
-                startActivity(i);
+                Intent i1 = new Intent(MainActivity.this, ControlAxctivity.class);
+                startActivity(i1);
                 break;
 //            case R.id.Img2:
 //                break;
-//            case R.id.Img3:
-//                break;
+            case R.id.Img3:
+                Intent i3 = new Intent(MainActivity.this, BedroomActivity.class);
+                startActivity(i3);
+                break;
             default:
                 Toast.makeText(this, "ERROR WHILE NAVIGATING", Toast.LENGTH_SHORT).show();
         }

@@ -6,8 +6,7 @@
     android:paddingBottom="@dimen/fab_margin"
     android:paddingLeft="@dimen/fab_margin"
     android:paddingRight="@dimen/fab_margin"
-    android:paddingTop="@dimen/fab_margin"
-    android:background="#212121">
+    android:paddingTop="@dimen/fab_margin">
 
     <Switch
         android:id="@+id/lights_switch"
@@ -37,17 +36,17 @@
 
     <SeekBar
         android:id="@+id/ac_temp_ctrl"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textColor="#F50057"
         android:onClick="switchTrigger"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:padding="10dp"
-        android:max="17"
+        android:max="16"
+        android:visibility="gone"
         android:layout_below="@+id/ac_icon"
-        android:layout_alignRight="@+id/ac_icon"
-        android:layout_alignLeft="@+id/ac_switch" />
+        android:progress="9"
+        />
+
 
     <ImageView
         android:id="@+id/lights_image"
@@ -112,12 +111,22 @@
         android:layout_height="40dp"
         android:text="Home >> Bedroom"
         android:textColor="#F50057"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="7dp"
         android:layout_marginStart="7dp" />
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ac_temp_ctrl"
+        android:text="Current Temperature:"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textSize="20dp"/>
 
 </RelativeLayout>

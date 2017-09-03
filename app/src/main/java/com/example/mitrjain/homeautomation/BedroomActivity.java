@@ -1,5 +1,6 @@
 package com.example.mitrjain.homeautomation;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -30,13 +31,34 @@ public class BedroomActivity extends AppCompatActivity {
         ac=(Switch)findViewById(R.id.ac_switch);
         ac_seek_bar=(SeekBar)findViewById(R.id.ac_temp_ctrl);
         temp_text=(TextView)findViewById(R.id.temp_text);
-      //  ac_seek_bar.setThumbTintList(Colo);
+        ac_seek_bar.setBackgroundColor(Color.parseColor("#b2ebf2"));
+        temp_text.setBackgroundColor(Color.parseColor("#b2ebf2"));
+        temp_text.setTextColor(Color.parseColor("#000000"));
         ac_seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 String text = "Current temperature: "+(i+16)+" 'C";
                 temp_text.setText(text);
-
+                if(i < 4)
+                {
+                    temp_text.setBackgroundColor(Color.parseColor("#0288d1"));
+                    ac_seek_bar.setBackgroundColor(Color.parseColor("#0288d1"));
+                }
+                else if(i >= 4 && i < 8)
+                {
+                    temp_text.setBackgroundColor(Color.parseColor("#26c6da"));
+                    ac_seek_bar.setBackgroundColor(Color.parseColor("#26c6da"));
+                }
+                else if(i >= 8 && i < 14)
+                {
+                    temp_text.setBackgroundColor(Color.parseColor("#b2ebf2"));
+                    ac_seek_bar.setBackgroundColor(Color.parseColor("#b2ebf2"));
+                }
+                else
+                {
+                    temp_text.setBackgroundColor(Color.parseColor("#ff9e80"));
+                    ac_seek_bar.setBackgroundColor(Color.parseColor("#ff9e80"));
+                }
             }
 
             @Override

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Switch;
 
 /**
@@ -21,14 +22,9 @@ public class ControlAxctivity extends AppCompatActivity {
         fans = (Switch)findViewById(R.id.fans_switch);
         lights = (Switch)findViewById(R.id.lights_switch);
         tv = (Switch)findViewById(R.id.tv_switch);
-
-
-
-
     }
 
-    public void switchTrigger(View v)
-    {
+    public void switchTrigger(View v) throws Exception {
         Switch s = (Switch)v;
         if(s.getId() == R.id.master_switch)
         {
@@ -44,6 +40,15 @@ public class ControlAxctivity extends AppCompatActivity {
                 lights.setChecked(false);
                 tv.setChecked(false);
                 switchCount=0;
+            }
+        }
+        else if(s.getId() == R.id.fans_switch)
+        {
+            ImageView imageView = (ImageView) findViewById(R.id.fan_image);
+            for(int i = 0; i < 10; i++)
+            {
+                imageView.setRotation(imageView.getRotation() + 45);
+                Thread.sleep(100);
             }
         }
         else {

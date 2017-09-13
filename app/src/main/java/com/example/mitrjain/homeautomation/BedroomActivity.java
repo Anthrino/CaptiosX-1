@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -78,8 +80,7 @@ public class BedroomActivity extends AppCompatActivity {
 
 
 
-    public void switchTrigger(View v)
-    {
+    public void switchTrigger(View v) throws Exception {
         Switch s = (Switch)v;
         if(s.getId() == R.id.master_switch)
         {
@@ -99,6 +100,20 @@ public class BedroomActivity extends AppCompatActivity {
                 s=(Switch)findViewById(R.id.ac_switch);
                 switchCount=0;
             }
+        }
+        else if(s.getId() == R.id.fans_switch)
+        {
+            ImageView imageView = (ImageView) findViewById(R.id.fan_image);
+            float fromRotation = 0;
+            float toRotation = fromRotation += 300;
+
+            final RotateAnimation rotateAnim = new RotateAnimation(
+                    fromRotation, toRotation, imageView.getWidth()/2, imageView.getHeight()/2);
+
+            rotateAnim.setDuration(1000); // Use 0 ms to rotate instantly
+            rotateAnim.setFillAfter(true); // Must be true or the animation will reset
+            for (int i = 0; i <100; i++)
+                imageView.startAnimation(rotateAnim);
         }
         else {
             if(s.isChecked())

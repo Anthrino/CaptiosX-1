@@ -11,7 +11,7 @@ import android.widget.Switch;
  * Created by Mit R Jain on 17-08-2017.
  */
 
-public class ControlAxctivity extends AppCompatActivity {
+public class HallActivity extends AppCompatActivity {
     Switch master, fans, lights, tv;
     Integer switchCount = 0;
     ImageView tv_icon, light_icon, fan_icon;
@@ -19,7 +19,7 @@ public class ControlAxctivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_control);
+        setContentView(R.layout.hall_fragment);
         master = (Switch) findViewById(R.id.master_switch);
         fans = (Switch) findViewById(R.id.fans_switch);
         lights = (Switch) findViewById(R.id.lights_switch);

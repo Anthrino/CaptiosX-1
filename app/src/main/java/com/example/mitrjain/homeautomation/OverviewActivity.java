@@ -5,25 +5,74 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Switch;
 
 public class OverviewActivity extends AppCompatActivity {
+
+    Switch master, lights_switch1, lights_switch2, lights_switch3;
+    Integer switchCount = 0;
+    ImageView light_icon1, light_icon2, light_icon3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overview);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        master = (Switch) findViewById(R.id.master_switch);
+        lights_switch1 = (Switch) findViewById(R.id.lights_switch1);
+        lights_switch2 = (Switch) findViewById(R.id.lights_switch2);
+        lights_switch3 = (Switch) findViewById(R.id.lights_switch3);
+        light_icon1 = (ImageView) findViewById(R.id.lights_image1);
+        light_icon2= (ImageView) findViewById(R.id.lights_image2);
+        light_icon3 = (ImageView) findViewById(R.id.lights_image3);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+    public void switchTrigger(View v) throws Exception {
+        Switch s = (Switch) v;
+        if (s.getId() == R.id.master_switch) {
+            if (master.isChecked()) {
+                lights_switch1.setChecked(true);
+                lights_switch2.setChecked(true);
+                lights_switch3.setChecked(true);
+                switchCount = 3;
+            } else {
+                lights_switch1.setChecked(false);
+                lights_switch2.setChecked(false);
+                lights_switch3.setChecked(false);
+                switchCount = 0;
             }
-        });
+        } else {
+            if (s.isChecked())
+                switchCount++;
+            else
+                switchCount--;
+            if (switchCount == 3) {
+                master.setChecked(true);
+                //switchTrigger(master);
+            } else {
+                master.setChecked(false);
+            }
+        }
+        if (lights_switch3.isChecked()) {
+            light_icon3.setImageResource(R.drawable.light_on);
+        } else {
+            light_icon3.setImageResource(R.drawable.light);
+        }
+        if (lights_switch1.isChecked()) {
+            light_icon1.setImageResource(R.drawable.light_on);
+        } else {
+            light_icon1.setImageResource(R.drawable.light);
+        }
+        if (lights_switch2.isChecked()) {
+            light_icon2.setImageResource(R.drawable.light_on);
+        } else {
+            light_icon2.setImageResource(R.drawable.light);
+        }
+
+        Log.d("CaptiosX", switchCount.toString());
+
     }
 
 }

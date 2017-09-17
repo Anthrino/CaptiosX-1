@@ -10,12 +10,13 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#212121"
         android:titleTextColor="#F50057">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="CaptiosX - Home Automator"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
-            android:text="CaptiosX"/>
+            android:textSize="20dp" />
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.DrawerLayout
@@ -50,7 +51,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:layout_marginBottom="10dp"
-                    android:background="@drawable/kitchen" />
+                    android:background="@drawable/kitchen"
+                    android:onClick="navigate" />
 
                 <ImageButton
                     android:id="@+id/Img3"
@@ -63,15 +65,21 @@
         </ScrollView>
 
         <android.support.design.widget.NavigationView
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#212121">
 
             <ListView
+                android:id="@+id/Overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ListView
                 android:id="@+id/Profiles"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
+
         </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>

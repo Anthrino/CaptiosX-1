@@ -6,20 +6,17 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 /**
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
     EditText mEmailView, mPasswordView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Login_button.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mEmailView.getText().toString().trim().length()==0){
+                if (mEmailView.getText().toString().trim().length() == 0) {
                     mEmailView.setError("Username missing");
                     mEmailView.requestFocus();
                 }
@@ -42,18 +39,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 //                    mEmailView.requestFocus();
 //                }
 
-                if(mPasswordView.getText().toString().trim().length()==0){
+                if (mPasswordView.getText().toString().trim().length() == 0) {
                     mPasswordView.setError("Password missing");
                     mPasswordView.requestFocus();
+                } else {
+                    attemptLogin(mEmailView.getText().toString());
                 }
-                attemptLogin();
             }
         });
 
     }
 
-    private void attemptLogin() {
+    private void attemptLogin(String username) {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        intent.putExtra("username", username);
         startActivity(intent);
     }
 

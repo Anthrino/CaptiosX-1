@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter listAdapter = new ArrayAdapter(this, R.layout.navigationfield, listOfProfiles);
         ArrayAdapter listAdapter2 = new ArrayAdapter(this, R.layout.navigationfield, overviewList);
         overview.setAdapter(listAdapter2);
+        String username = "Welcome "+getIntent().getExtras().getString("username");
+        Toast.makeText(this, username, Toast.LENGTH_LONG).show();
 //        profiles.setAdapter(listAdapter);
 
     }

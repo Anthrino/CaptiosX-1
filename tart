@@ -1,0 +1,223 @@
+[33mcommit ddd9c8f0e07c9c7acc2fb84d9a4a1bc283fb71e5[m
+Merge: 7673e1a a2156ff
+Author: Mit <mit.jain@somaiya.edu>
+Date:   Fri Sep 22 15:15:04 2017 +0530
+
+    Merge branch 'master' of https://github.com/mitrjain96/CaptiosX
+
+[33mcommit 7673e1ae3b5902c74a96ed55b63bebc24e1ff42e[m
+Author: Mit <mit.jain@somaiya.edu>
+Date:   Fri Sep 22 15:14:22 2017 +0530
+
+    UI BUTTONS
+
+[33mcommit a2156ff258057971a0cfb6a05471168840bcd4ff[m
+Merge: 4577808 da2f473
+Author: Jerin John <jerinjohn101@gmail.com>
+Date:   Fri Sep 22 15:12:03 2017 +0530
+
+    Merge pull request #3 from mitrjain96/login_activity
+    
+    Login Activity added.
+
+[33mcommit da2f4731edb380daaa2e97e424c26e4b2c8d1e5d[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Fri Sep 22 15:10:38 2017 +0530
+
+    Login Activity added.
+
+[33mcommit 4577808de83a7c647c1aac93073ee656c4382caa[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:57:02 2017 +0530
+
+    Renovated Bedroom, Kitchen, and hall
+
+[33mcommit 70a1252ac9bca359e583639cfe40c7b5d5529442[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:55:33 2017 +0530
+
+    renovated hall
+
+[33mcommit ab6a9142dcc4a2c2e41baa6bf375280bc227401d[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:55:17 2017 +0530
+
+    renovated kitchen
+
+[33mcommit b1241ab876a6c59c36260334cf2394ee1a9cd020[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:55:00 2017 +0530
+
+    renovated bedroom
+
+[33mcommit 749a3f5151b20e8acc0257f53bab2073ef3be8fd[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:35:16 2017 +0530
+
+    add new hall, kitchen and bedroom images
+
+[33mcommit 112198e40d42da4129309f2c217464d4cc132f8e[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:34:30 2017 +0530
+
+    removed old hall.jpg
+
+[33mcommit 64eb4da431edc04cfb425814feceade9cf78ee1b[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:34:10 2017 +0530
+
+    removed old kitchen.jpg
+
+[33mcommit f0f19cd7d007d2cc152900033599a986c289b553[m
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Fri Sep 22 14:32:45 2017 +0530
+
+    removed old bedroom.jpg
+
+[33mcommit 657e63d9a58573e50867c5b039049f31242e3fe4[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Mon Sep 18 04:12:23 2017 +0530
+
+    Added Overview Layout. NavBar incomplete.
+
+[33mcommit f9acee5ff01950e256cb3f3e01081ad0513e0b72[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Mon Sep 18 04:05:47 2017 +0530
+
+    NavDraer Trial
+
+[33mcommit 8fc67cbecaf8f286df66ac737f0e887d43cf2612[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Thu Sep 14 00:42:03 2017 +0530
+
+    Icon Animations Final.
+
+[33mcommit 274c986c2157178b7bd1525ed82c4a90f91aae35[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Thu Sep 14 00:41:36 2017 +0530
+
+    Icon Animations Final.
+
+[33mcommit d63ae0fcab41a0a16bc5c53a434f0aeeeecec239[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Wed Sep 13 23:54:18 2017 +0530
+
+    Fan Animation Trial
+
+[33mcommit b6433ab2b0d26f6d99d8259d28c5461267be9950[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Mon Sep 4 00:50:37 2017 +0530
+
+    Temp Slider Color Change configured.
+
+[33mcommit 8d0bcfb093bb6c3874d110747b1eebd135362789[m
+Author: Mit <mitrjain@gmail.com>
+Date:   Sun Sep 3 07:30:28 2017 +0530
+
+    Added missing initial temperature value.
+
+[33mcommit 2beedd33b5462a654162a743fc773ef055986117[m
+Author: Mit <mitrjain@gmail.com>
+Date:   Sun Sep 3 05:24:52 2017 +0530
+
+    Added basic Seekbar functionality.
+    ToDo:
+    Seekbar Styling
+
+[33mcommit f34984aba7b6f76cccb9615f5f7cfc099e6f6826[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Fri Sep 1 14:50:38 2017 +0530
+
+    BR UI Edit
+
+[33mcommit b7378711ba13a09140de73a09d139089ed6a0149[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Fri Sep 1 14:39:45 2017 +0530
+
+    Bedroom Activity Added.
+
+[33mcommit b9615a0a5f357bb8a56559e9b4aad3f532483ab7[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Fri Aug 18 22:17:12 2017 +0530
+
+    UI Update 2.0
+
+[33mcommit 4ffa3ba7966aa1e3b5a468726f83045fd9038fdd[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Fri Aug 18 01:53:51 2017 +0530
+
+    UI Update.
+
+[33mcommit ac9f77720e45313b99af160bb5fff8b50040e119[m
+Author: Jerin John <jerin.j@somaiya.edu>
+Date:   Fri Aug 18 01:19:25 2017 +0530
+
+    Splash Screen final.
+
+[33mcommit 93aa6a71703ed30bfcc67a31677da7dc63120756[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Fri Aug 18 00:26:15 2017 +0530
+
+    Manual Commit
+
+[33mcommit 5453b7f52239aef187311ad1b4f1cff16919bbab[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Fri Aug 18 00:23:20 2017 +0530
+
+    Added  synchronized Switch behavious.
+    Changed some color combinations.
+    Todo:
+    IOT for other rooms.
+    Splash Screen Image compression
+
+[33mcommit 9e4f0cfd1fce2fa09db209f7b5d454898cfdbe18[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Thu Aug 17 23:34:21 2017 +0530
+
+    Basic working Model.
+    Things to be done:
+    Reduce image size because app crashes when using splash screen.
+    Similarly Image sizes very large and slowing down the scrolling of contents of navigation activity.
+
+[33mcommit 43941225c783b7143fdb131fa1368ec4d7d82324[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Thu Aug 17 21:56:28 2017 +0530
+
+    Gradle Build completed.
+    Added basic images for navigation activity.
+    Yet to add Navigation view(Side Nav)
+    Links between various activities checked.
+
+[33mcommit c2f2b062fd6fb56b8f9a9d6933d54ea905aee845[m
+Author: Anthrino <jerinjohn101@gmail.com>
+Date:   Thu Aug 17 19:44:02 2017 +0530
+
+    Added splash screen.
+
+[33mcommit fd0d4d21d2bfe27e86f49a7ac4e0b76922eb4768[m
+Merge: 25261fd 365da2d
+Author: Jay Ashok Lal <jay.lal@somaiya.edu>
+Date:   Thu Aug 17 14:53:31 2017 +0530
+
+    Merge pull request #2 from mitrjain96/screen/control
+    
+    Added the Control Activity and Layout, added icons
+
+[33mcommit 365da2d465650f79b55b8601577a6864154ff0f6[m
+Author: Jay Lal <jay.lal@somaiya.edu>
+Date:   Thu Aug 17 14:51:08 2017 +0530
+
+    Added the Control Activity and Layout, added icons
+
+[33mcommit 25261fd06b383560c5ef4d07fc08e7064e67d928[m
+Author: Jay Lal <jay.lal@somaiya.edu>
+Date:   Thu Aug 17 12:49:51 2017 +0530
+
+    Changed Folder from Images --> to drawable, cuz it was giving error
+    Renamed the image files to start with Lower_Case
+
+[33mcommit 696fe9c595a287ac356068a60c8dc733210fd924[m
+Author: mitrjain96 <mit.jain@somaiya.edu>
+Date:   Sun Aug 13 14:04:58 2017 +0530
+
+    Inital Commit

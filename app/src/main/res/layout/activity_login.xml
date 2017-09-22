@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/colorBGDark"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.example.mitrjain.homeautomation.LoginActivity">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CaptiosX Account"/>
+
+        <EditText
+            android:id="@+id/username_field"
+            android:padding="25dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter username.."/>
+
+        <EditText
+            android:id="@+id/password_field"
+            android:padding="25dp"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter password.."/>
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/login_button"
+                android:background="@color/colorBGDark"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:textSize="20sp"
+                android:text="Login"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+</LinearLayout>

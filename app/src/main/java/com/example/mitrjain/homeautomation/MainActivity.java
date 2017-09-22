@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         navDrawer.addDrawerListener(toggle);
+        toggle.syncState();
         ArrayAdapter listAdapter = new ArrayAdapter(this, R.layout.navigationfield, listOfProfiles);
         ArrayAdapter listAdapter2 = new ArrayAdapter(this, R.layout.navigationfield, overviewList);
         overview.setAdapter(listAdapter2);

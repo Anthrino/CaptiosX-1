@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -12,14 +11,15 @@
         android:titleTextColor="#F50057">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CaptiosX - Home Automator"
-            android:textColor="@color/colorAccent"
-            android:textSize="20dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CaptiosX - Home Automator"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp" />
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.DrawerLayout
+
         android:id="@+id/navDrawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -83,4 +83,5 @@
         </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>
+
 </LinearLayout>

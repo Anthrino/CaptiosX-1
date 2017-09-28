@@ -1,6 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/fab_margin"
@@ -49,8 +55,8 @@
 
     <ImageView
         android:id="@+id/lights_image1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:srcCompat="@drawable/light"
         android:layout_marginTop="51dp"
         android:layout_below="@+id/master_switch"
@@ -61,8 +67,8 @@
 
     <ImageView
         android:id="@+id/lights_image2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:srcCompat="@drawable/light"
         android:layout_marginTop="37dp"
         android:layout_below="@+id/lights_image1"
@@ -71,8 +77,8 @@
 
     <ImageView
         android:id="@+id/lights_image3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:srcCompat="@drawable/light"
         android:layout_marginTop="37dp"
         android:layout_below="@+id/lights_image2"
@@ -103,7 +109,8 @@
         android:layout_alignParentTop="true"
         android:text="Overview >> Lights"
         android:textColor="#F50057"
-        android:textSize="30dp"
+        android:textSize="18dp"
         android:textStyle="bold" />
 
 </RelativeLayout>
+</LinearLayout>

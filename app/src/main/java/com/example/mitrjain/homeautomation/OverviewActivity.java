@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -25,9 +26,24 @@ public class OverviewActivity extends AppCompatActivity {
         lights_switch2 = (Switch) findViewById(R.id.lights_switch2);
         lights_switch3 = (Switch) findViewById(R.id.lights_switch3);
         light_icon1 = (ImageView) findViewById(R.id.lights_image1);
-        light_icon2= (ImageView) findViewById(R.id.lights_image2);
+        light_icon2 = (ImageView) findViewById(R.id.lights_image2);
         light_icon3 = (ImageView) findViewById(R.id.lights_image3);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+        public boolean onOptionsItemSelected(MenuItem item)
+        {
+            switch(item.getItemId())
+            {
+                case android.R.id.home:
+                    onBackPressed();
+                    break;
+                default: System.out.println("Nothing");
+            }
+            return true;
+        }
+
 
     public void switchTrigger(View v) throws Exception {
         Switch s = (Switch) v;

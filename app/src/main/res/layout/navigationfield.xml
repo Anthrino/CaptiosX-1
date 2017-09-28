@@ -3,7 +3,8 @@
     android:id="@+id/textView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
-    android:padding="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
     android:textColor="#F50057"
+    android:background="@drawable/text_view_borders"
     android:textSize="20dp" />

@@ -24,46 +24,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:scrollbarStyle="insideInset"
-            android:scrollbars="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#424242"
                 android:orientation="vertical">
 
-
-                <ImageButton
-                    android:id="@+id/Img1"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/hall"
-                    android:onClick="navigate" />
-
-                <ImageButton
-                    android:id="@+id/Img2"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/kitchen"
-                    android:onClick="navigate" />
-
-                <ImageButton
-                    android:id="@+id/Img3"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/bedroom"
-                    android:onClick="navigate" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                />
             </LinearLayout>
-        </ScrollView>
-
         <android.support.design.widget.NavigationView
             android:layout_width="250dp"
             android:layout_height="match_parent"
@@ -74,16 +47,50 @@
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="vertical">
-            <ListView
+
+             <TextView
+                 android:id="@+id/UserDetails"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textSize="27dp"
+                 android:textColor="#fff"
+                 android:padding="5dp"/>
+
+               <TextView
+                   android:layout_marginTop="20dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="25dp"
+                   android:text="Overview"
+                   android:textColor="@color/colorAccent"
+                   android:padding="5dp"/>
+
+
+               <ListView
+                android:layout_marginTop="10dp"
                 android:id="@+id/Overview_ListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:divider="#FFF"
+                   android:layout_marginLeft="25dp"
                 />
 
+               <TextView
+                   android:layout_marginTop="25dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="25dp"
+                   android:text="Profiles"
+                   android:textColor="@color/colorAccent"
+                   android:padding="5dp"/>
+
             <ListView
+                android:layout_marginTop="10dp"
+                android:divider="#FFF"
                 android:id="@+id/Profiles_ListView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"/>
            </LinearLayout>
 
         </android.support.design.widget.NavigationView>

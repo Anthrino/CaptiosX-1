@@ -97,7 +97,7 @@
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:text="Home >> Hall"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold"
             android:layout_alignBottom="@+id/master_switch"
             android:layout_alignParentLeft="true"

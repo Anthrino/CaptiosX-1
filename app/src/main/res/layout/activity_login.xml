@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#006064"
-            android:hint="Enter username.."/>
+            android:hint="Enter username.."
+            android:text="Mit" />
 
         <EditText
             android:id="@+id/password_field"
@@ -33,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="#006064"
-            android:hint="Enter password.."/>
+            android:hint="Enter password.."
+            android:inputType="textPassword"/>
 
         <LinearLayout
             android:id="@+id/email_login_form"

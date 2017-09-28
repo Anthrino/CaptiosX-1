@@ -2,7 +2,9 @@ package com.example.mitrjain.homeautomation;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -27,8 +29,22 @@ public class HallActivity extends AppCompatActivity {
         tv_icon = (ImageView) findViewById(R.id.tv_image);
         light_icon = (ImageView) findViewById(R.id.lights_image);
         fan_icon = (ImageView) findViewById(R.id.fan_image);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            default: System.out.println("Nothing");
+        }
+        return true;
+    }
     public void switchTrigger(View v) throws Exception {
         Switch s = (Switch) v;
         if (s.getId() == R.id.master_switch) {

@@ -10,7 +10,8 @@
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="drawerArrowStyle">@style/hamburgerIcon</item>
+        <item name="colorControlNormal">@color/upArrowColor</item>
 
         <item name="android:textColor">@color/colorAccent</item>
     </style>
@@ -22,8 +23,13 @@
     <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+
+    <style name="hamburgerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="color">@android:color/white</item>
     </style>
+
+    <!--<syle name="homeAsUpIndicator" parent="Widget.AppCompat.">-->
+        <!--<item name="foreground">@android:color/white</item>-->
+    <!--</syle>-->
 
 </resources>

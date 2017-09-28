@@ -26,7 +26,7 @@ public class BedroomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bedroom_fragment);
         master = (Switch) findViewById(R.id.master_switch);
-        fans = (Switch) findViewById(R.id.fans_switch);
+        //fans = (Switch) findViewById(R.id.fans_switch);
         lights = (Switch) findViewById(R.id.lights_switch);
         tv = (Switch) findViewById(R.id.tv_switch);
         ac = (Switch) findViewById(R.id.ac_switch);

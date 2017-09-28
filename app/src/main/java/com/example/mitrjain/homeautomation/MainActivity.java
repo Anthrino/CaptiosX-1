@@ -26,17 +26,21 @@ public class MainActivity extends AppCompatActivity {
         ImageButton img1 = (ImageButton) findViewById(R.id.Img1);
         ImageButton img2 = (ImageButton) findViewById(R.id.Img2);
         ImageButton img3 = (ImageButton) findViewById(R.id.Img3);
-        ListView profiles = (ListView) findViewById(R.id.Profiles);
-        ListView overview = (ListView) findViewById(R.id.Overview);
+        ListView profiles = (ListView) findViewById(R.id.Profiles_ListView);
+        ListView overview = (ListView) findViewById(R.id.Overview_ListView);
         DrawerLayout navDrawer = (DrawerLayout) findViewById(R.id.navDrawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        overviewList.clear();
+        listOfProfiles.clear();
+
         overviewList.add("Lights");
         overviewList.add("CCTV Cameras");
         overviewList.add("Thermostats");
-        for (Integer i = 1; i <= 10; i++) {
-            listOfProfiles.add("Profile " + i.toString());
-        }
+        listOfProfiles.add("Party");
+        listOfProfiles.add("Not Home");
+        listOfProfiles.add("Night");
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, navDrawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             public void onDrawerClosed(View view) {
@@ -49,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         };
         navDrawer.addDrawerListener(toggle);
         toggle.syncState();
-        ArrayAdapter listAdapter = new ArrayAdapter(this, R.layout.navigationfield, listOfProfiles);
+        ArrayAdapter listAdapter1 = new ArrayAdapter(this, R.layout.navigationfield, listOfProfiles);
         ArrayAdapter listAdapter2 = new ArrayAdapter(this, R.layout.navigationfield, overviewList);
+        profiles.setAdapter(listAdapter1);
         overview.setAdapter(listAdapter2);
         String username = "Welcome "+getIntent().getExtras().getString("username");
         Toast.makeText(this, username, Toast.LENGTH_LONG).show();
-//        profiles.setAdapter(listAdapter);
 
     }
 
